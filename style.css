@@ -1,0 +1,25 @@
+body{
+    background-image: url(image.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    border-radius: 20px solid;
+}
+
+#clock{
+    text-align: center;
+   font-weight: bold;
+   font-size: 90px;
+   color: rgb(121, 25, 67);
+   backdrop-filter: blur(10px);
+   width: 950px;
+}
