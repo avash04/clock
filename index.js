@@ -1,9 +1,12 @@
 function nowTime(){
     const newTime=new Date();
-    const hour=newTime.getHours().toString().padStart(2,0);
+    let hours=newTime.getHours();
+    const timeSetter= hours>=12 ? "PM":"AM";
+    hours= hours % 12||12;
+     hours=hours.toString().padStart(2,0);
      const min=newTime.getMinutes().toString().padStart(2,0);
       const sec=newTime.getSeconds().toString().padStart(2,0);
-      const updatedDate=`${hour}:${min}:${sec}`;
+      const updatedDate=`${hours}:${min}:${sec} ${timeSetter}`;
       document.getElementById('clock').textContent=updatedDate;
 
 }
